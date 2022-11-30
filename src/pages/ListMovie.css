@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.Container {
+  margin: 0 auto;
+  width: 70%;
+  padding-top: 120px;
+}
+
+.ListMovie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.CardOneMovie {
+  background: red;
+  width: 20%;
+
+  border: 1px solid black;
+}
+.ListMovie img {
+  width: 100%;
+  height: 280px;
+}
