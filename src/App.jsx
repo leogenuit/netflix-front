@@ -33,6 +33,7 @@ function App() {
         </Route>
         <Route path="/movies/:id" element={<OneMovie />} />
         <Route path="/movies/:id/update" element={<UpdatedMovie />} />
+        <Route path="/movies/:id/delete" element={<UpdatedMovie />} />
       </Routes>
     </div>
   );

@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import useAuth from "../../auth/useAuth";
 import "./NavMain.css";
 import netflixLogo from "./../../styles/img/logo-netflix.png";
+import Logout from "./../../styles/img/logout.png";
 const NavMain = () => {
   const { isLoggedIn, currentUser, removeUser } = useAuth();
   return (
@@ -9,22 +10,36 @@ const NavMain = () => {
       <NavLink className="logo" to="/">
         <img src={netflixLogo} alt="netflix" />
       </NavLink>
+      <NavLink className="logo" to="/">
+        <p>Home</p>
+      </NavLink>
+      <NavLink className="logo" to="/">
+        <p>Movies</p>
+      </NavLink>
+      <NavLink className="logo" to="/">
+        <p>Category</p>
+      </NavLink>
 
-      {isLoggedIn && (
+      {/* {currentUser?.isAdmin && (
+          <>
+          <NavLink to="/dashboard">Admin Dashboard</NavLink>
+          </>
+        )} */}
+
+      {isLoggedIn ? (
         <>
-          <button onClick={removeUser}>LogOut</button>
+          <NavLink to="/profile">{currentUser && currentUser.name}</NavLink>
+          <p onClick={removeUser}>
+            <img className="Logout" src={Logout} alt="log-out" />
+          </p>
         </>
-      )}
-      {!isLoggedIn && (
+      ) : (
         <>
-          <NavLink to="/signin">Log in</NavLink>
-          <NavLink to="/signup">Sign Up</NavLink>
-        </>
-      )}
-      {currentUser?.isAdmin && (
-        <>
-          <NavLink to="/dashboard" className="Admin-Dashboard">
-            Admin Dashboard
+          <NavLink className="Sign" to="/signin">
+            Log in
+          </NavLink>
+          <NavLink className="Sign" to="/signup">
+            Sign Up
           </NavLink>
         </>
       )}
