@@ -1,17 +1,18 @@
 img {
   width: 150px;
-  height: 100px;
+  height: 40px;
 }
 .NavMain {
   display: flex;
   width: 100%;
   height: 100px;
   justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.954);
+  background-color: black;
   position: fixed;
   top: 0;
   align-items: center;
   color: white;
+  border-bottom: 0.1px solid rgb(106, 106, 106);
 }
 
 .NavContainer {

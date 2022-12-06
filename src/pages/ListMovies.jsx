@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./ListMovie.css";
 import SearchBar from "../components/SearchBar/SearchBar";
+import Footer from "../components/Footer/Footer";
 
 const ListMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -21,7 +22,7 @@ const ListMovies = () => {
 
   console.table(movies);
   return (
-    <div>
+    <div className="AllMoviesSearchBar">
       <SearchBar
         searchString={searchString}
         setSearchString={setSearchString}

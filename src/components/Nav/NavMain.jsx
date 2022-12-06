@@ -13,12 +13,15 @@ const NavMain = () => {
       <NavLink className="logo" to="/">
         <p>Home</p>
       </NavLink>
-      <NavLink className="logo" to="/">
+      <NavLink className="logo" to="/movies">
         <p>Movies</p>
       </NavLink>
-      <NavLink className="logo" to="/">
-        <p>Category</p>
-      </NavLink>
+
+      {currentUser?.isAdmin && (
+        <NavLink className="logo" to="/create">
+          <p>Create</p>
+        </NavLink>
+      )}
 
       {/* {currentUser?.isAdmin && (
           <>

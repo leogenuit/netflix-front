@@ -4,6 +4,7 @@ import apiHandler from "../../api/apiHandler";
 import useAuth from "../../auth/useAuth";
 import { useNavigate } from "react-router-dom";
 import "./FormSign.css";
+import popcorn from "./../../styles/img/pop-corn.png";
 
 const FormSignIn = () => {
   const [{ email, password }, handleChange] = useForm({
@@ -55,7 +56,9 @@ const FormSignIn = () => {
             />
           </div>
           <div>
-            <button>Submit</button>
+            <button>
+              <img src={popcorn} alt="" />
+            </button>
           </div>
         </div>
       </form>

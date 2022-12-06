@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
-
 const SearchBar = ({ searchString, setSearchString }) => {
   const handleSearch = (e) => {
     setSearchString(e.target.value);

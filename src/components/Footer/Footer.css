@@ -1,0 +1,15 @@
+.Footer {
+  display: flex;
+  padding: 5px;
+  background: rgb(13, 13, 13);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.Footer p {
+  color: rgb(147, 147, 147);
+  margin: 0 auto;
+}
+.foot {
+  padding: 20px;
+}
