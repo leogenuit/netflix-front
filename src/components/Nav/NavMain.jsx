@@ -7,12 +7,10 @@ const NavMain = () => {
   const { isLoggedIn, currentUser, removeUser } = useAuth();
   return (
     <nav className="NavMain">
-      <NavLink className="logo" to="/">
+      <NavLink className="logo" to="/movies">
         <img src={netflixLogo} alt="netflix" />
       </NavLink>
-      <NavLink className="logo" to="/">
-        <p>Home</p>
-      </NavLink>
+
       <NavLink className="logo" to="/movies">
         <p>Movies</p>
       </NavLink>
@@ -31,7 +29,7 @@ const NavMain = () => {
 
       {isLoggedIn ? (
         <>
-          <NavLink to="/profile">{currentUser && currentUser.name}</NavLink>
+          <NavLink to="/favori">Favorites</NavLink>
           <p onClick={removeUser}>
             <img className="Logout" src={Logout} alt="log-out" />
           </p>

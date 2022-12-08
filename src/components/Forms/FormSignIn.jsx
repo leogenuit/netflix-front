@@ -23,7 +23,7 @@ const FormSignIn = () => {
         console.log(res);
         storeToken(res.authToken);
         authenticateUser();
-        navigate("/");
+        navigate("/movies");
       })
       .catch((e) => {
         setError(e.response.data);

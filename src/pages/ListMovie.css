@@ -27,4 +27,5 @@
 
 .AllMoviesSearchBar {
   background: rgb(13, 13, 13);
+  min-height: calc(100vh - 100px);
 }
