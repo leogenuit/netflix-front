@@ -150,7 +150,7 @@ const OneMovie = () => {
         </div>
 
         <div className="Description">
-          <p>{movie.description}</p>
+          <p>Description : {movie.description}</p>
         </div>
 
         <div className="AllButtons">
