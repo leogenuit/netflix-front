@@ -18,12 +18,12 @@ function App() {
     <div className="App">
       <NavMain />
       <Routes>
-        <Route path="/" element={<ListMovies />} />
         <Route element={<LoggedOut />}>
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
         </Route>
         <Route element={<PrivateRoute />}>
+          <Route path="/" element={<ListMovies />} />
           <Route path="/movies" element={<ListMovies />} />
           {/* All routes after the PrivateRoute require the user to be loggedIn */}
           <Route path="/favori" element={<Favori />} />
