@@ -1,0 +1,38 @@
+.form-sign-in,
+.form-sign-up {
+  display: grid;
+  place-items: center;
+  background: url("https://prologue-alca.fr/sites/default/files/alca/styles/16x9_1920/public/ged/adobestock_196032189.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: calc(100vh - 100px);
+}
+.Form {
+  text-align: center;
+  margin-bottom: 300px;
+}
+.Form input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+  background-color: white;
+}
+
+form {
+  width: 20%;
+}
+form button {
+  width: 100%;
+
+  background: white;
+  border-radius: 5px;
+  height: 40px;
+}
+
+form button img {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}

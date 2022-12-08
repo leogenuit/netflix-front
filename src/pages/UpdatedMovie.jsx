@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import service from "../api/apiHandler";
 import UserContext from "../auth/UserContext";
 // import edit from "./../styles/img/button-edit.png";
+import "./UpdateMovie.css";
 
 const UpdatedMovie = () => {
   const { currentUser } = useContext(UserContext);
@@ -39,16 +40,25 @@ const UpdatedMovie = () => {
     return <div className="loading">Loading....</div>;
   }
   return (
-    <div className="oneMovie">
+    <div className="oneMovieUpdate">
       <h2>Update Movie</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form className="FormUpdated" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">Title :</label>
           <input
             type="text"
             name="title"
             value={movie.title}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="category">Category :</label>
+          <input
+            type="text"
+            name="category"
+            value={movie.category.name}
             onChange={handleChange}
           />
         </div>

@@ -3,7 +3,8 @@ import useForm from "../../hooks/useForm";
 import apiHandler from "../../api/apiHandler";
 import useAuth from "../../auth/useAuth";
 import { useNavigate } from "react-router-dom";
-import "./FormSignIn.css";
+import "./FormSign.css";
+import popcorn from "./../../styles/img/pop-corn.png";
 
 const FormSignIn = () => {
   const [{ email, password }, handleChange] = useForm({
@@ -22,7 +23,7 @@ const FormSignIn = () => {
         console.log(res);
         storeToken(res.authToken);
         authenticateUser();
-        navigate("/");
+        navigate("/movies");
       })
       .catch((e) => {
         setError(e.response.data);
@@ -33,23 +34,33 @@ const FormSignIn = () => {
     <div className="form-sign-in">
       {error && <h3 className="error">{error.message}</h3>}
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          onChange={handleChange}
-          value={email}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          onChange={handleChange}
-          value={password}
-        />
-        <button>Submit</button>
+        <div className="Form">
+          <div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              onChange={handleChange}
+              value={email}
+              placeholder="Email"
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              onChange={handleChange}
+              value={password}
+              placeholder="Password"
+            />
+          </div>
+          <div>
+            <button>
+              <img src={popcorn} alt="" />
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );

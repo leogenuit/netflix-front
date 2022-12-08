@@ -1,0 +1,16 @@
+.FormUpdated {
+  margin: 200px auto;
+}
+.FormUpdated input {
+  width: 100%;
+}
+.FormUpdated label {
+  color: white;
+}
+h2 {
+  color: white;
+}
+.oneMovieUpdate {
+  background: rgb(13, 13, 13);
+  height: 100%;
+}

@@ -8,20 +8,24 @@
   width: 70%;
   padding-top: 120px;
 }
-
 .ListMovie {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 3em;
   justify-content: center;
 }
-.CardOneMovie {
-  background: red;
-  width: 20%;
-
-  border: 1px solid black;
-}
 .ListMovie img {
-  width: 100%;
+  width: 210px;
   height: 280px;
+  border-radius: 5px;
+}
+.CardOneMovie {
+  border: 1px solid white;
+  box-shadow: 0px 0px 15px white;
+  border-radius: 5px;
+}
+
+.AllMoviesSearchBar {
+  background: rgb(13, 13, 13);
+  min-height: calc(100vh - 100px);
 }

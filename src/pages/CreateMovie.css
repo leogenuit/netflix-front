@@ -1,0 +1,16 @@
+.FormCreate {
+  margin: 200px auto;
+}
+.FormCreate input {
+  width: 100%;
+}
+.FormCreate label {
+  color: white;
+}
+h2 {
+  color: white;
+}
+.oneMovieCreate {
+  background: rgb(13, 13, 13);
+  height: 100%;
+}
