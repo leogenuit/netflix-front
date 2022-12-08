@@ -42,7 +42,7 @@ const CreateMovie = () => {
 
   return (
     <div className="oneMovieCreate">
-      <h2>Create Movie</h2>
+      <h2 className="CreateMovieTitle">Create Movie</h2>
 
       <form className="FormCreate" onSubmit={handleSubmit}>
         <div>
